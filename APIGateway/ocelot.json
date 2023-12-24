@@ -1,0 +1,66 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/GetUserList",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5051
+                }
+            ],
+            "UpstreamPathTemplate": "/Userlist",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/PostUser",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/Createlist",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+
+        {
+            "DownstreamPathTemplate": "/Updateuser",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/Updatelist",
+            "UpstreamHttpMethod": [
+                "PUT"
+            ]
+        },
+
+        {
+            "DownstreamPathTemplate": "/Deleteuser/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5004
+                }
+            ],
+            "UpstreamPathTemplate": "/Deletelist/{id}",
+            "UpstreamHttpMethod": [
+                "DELETE"
+            ]
+        }
+
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:5265/"
+    }
+}
